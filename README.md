@@ -1,2 +1,12 @@
-# Calculateor
-My First Calculator Project Python and Web Version 
+# 🧮 Calculator - By Bassant
+
+آلة حاسبة بسيطة - أول مشروع لي لمنحة روسيا
+
+## المميزات
+- جمع (+)
+- طرح (-)
+- ضرب (*)
+- قسمة (/)
+
+## التقنيات
+- Python
