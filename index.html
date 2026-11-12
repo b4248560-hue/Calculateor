@@ -31,3 +31,23 @@ function calculate(op) {
 </script>
 </body>
 </html>
+
+<!-- تصميم الساعة الرقمية على صفحة الويب -->
+<div style="background: yellow; padding: 25px; text-align: center; border-radius: 12px; margin: 20px auto; width: fit-content; border: 15px solid #ffcc00; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+    <div id="live-clock" style="font-family: 'Courier New', monospace; font-size: 40px; font-weight: bold; color: red;">00:00:00</div>
+    <div id="live-date" style="font-family: Arial, sans-serif; font-size: 15px; font-weight: bold; color: #333333; margin-top: 8px;">Date</div>
+</div>
+
+<script>
+    function runClock() {
+        const now = new Date();
+        // تحديث الوقت (ساعات، دقائق، ثواني)
+        document.getElementById('live-clock').innerText = now.toTimeString().split(' ')[0];
+        
+        // تحديث التاريخ
+        const options = { month: 'short', day: '2-digit', year: 'numeric' };
+        document.getElementById('live-date').innerText = now.toLocaleDateString('en-US', options);
+    }
+    setInterval(runClock, 200); // تحديث مستمر كل 200 مللي ثانية
+    runClock();
+</script>
